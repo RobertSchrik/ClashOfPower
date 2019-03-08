@@ -6,8 +6,6 @@ public class CubePlacer : MonoBehaviour
 {
     private Grid grid;
 
-    GameObject Randomobject; 
-
     private void Awake()
     {
         grid = FindObjectOfType<Grid>();
@@ -30,7 +28,7 @@ public class CubePlacer : MonoBehaviour
     private void PlaceCubeNear(Vector3 clickPoint)
     {
         var finalPosition = grid.GetNearestPointOnGrid(clickPoint);
-        GameObject.CreatePrimitive(Randomobject).transform.position = finalPosition;
+        GameObject.CreatePrimitive(PrimitiveType.Cube).transform.position = finalPosition;
 
         //GameObject.CreatePrimitive(PrimitiveType.Sphere).transform.position = clickPoint;
     }
