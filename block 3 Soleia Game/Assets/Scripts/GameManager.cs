@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     private Question currentQuestion;
 
     [SerializeField]
-    private Text
+    private Text questionText;
 
    void Start()
     {
@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
         int randomQuestionIndex = Random.Range(0, unansweredQuestions.Count);
         currentQuestion = unansweredQuestions[randomQuestionIndex];
 
-        currentQuestion.question;
+        questionText.text = currentQuestion.question;
 
         unansweredQuestions.RemoveAt(randomQuestionIndex);
     }

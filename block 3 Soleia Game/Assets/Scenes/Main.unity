@@ -1263,6 +1263,7 @@ MonoBehaviour:
     isTrue: 0
   - question: 2+2= 4
     isTrue: 1
+  questionText: {fileID: 595483790}
 --- !u!4 &1332101989
 Transform:
   m_ObjectHideFlags: 0
