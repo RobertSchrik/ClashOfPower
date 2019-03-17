@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     private Text questionText;
 
     [SerializeField]
+    private Text CurrentScore;
+
+    [SerializeField]
     public float timeBetweemQuestions = 1f;
 
     [SerializeField]
@@ -26,7 +29,7 @@ public class GameManager : MonoBehaviour
     private Text noAnswerText;
 
     [SerializeField]
-    private Animator animator; 
+    private Animator animator;
 
     void Start()
     {
@@ -37,6 +40,11 @@ public class GameManager : MonoBehaviour
         }
 
         SetCurrentQuestion();
+        CurrentScore.text = "Score: " + ScoreInformation.CurrentScore.ToString(); //set UI on screen
+
+    }
+
+    void Update(){
 
     }
 
@@ -74,6 +82,8 @@ public class GameManager : MonoBehaviour
         if (currentQuestion.isTrue)
         {
             Debug.Log("CORRECT!");
+            ScoreInformation.CurrentScore += 1;  //Add Score to Scoreinformation
+            CurrentScore.text = "Score: " + ScoreInformation.CurrentScore.ToString();  //add Scoreinformation to UI
         }
         else
         {
@@ -90,6 +100,8 @@ public class GameManager : MonoBehaviour
         if (!currentQuestion.isTrue)
         {
             Debug.Log("CORRECT!");
+            ScoreInformation.CurrentScore += 1; //Add Score to Scoreinformation
+            CurrentScore.text = "Score: " + ScoreInformation.CurrentScore.ToString(); //add Scoreinformation to UI
         }
         else
         {
