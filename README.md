@@ -1,2 +1,0 @@
-# ClashOfPower
-group Labs
