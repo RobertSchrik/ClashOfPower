@@ -22,12 +22,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public float timeBetweemQuestions = 1f;
 
-    [SerializeField]
-    private Text yesAnswerText;
-
-    [SerializeField]
-    private Text noAnswerText;
-
+    
     [SerializeField]
     private Animator animator;
 
@@ -55,15 +50,7 @@ public class GameManager : MonoBehaviour
 
         questionText.text = currentQuestion.question;
 
-        if (currentQuestion.isTrue)
-        {
-            yesAnswerText.text = "CORRECT!";
-            noAnswerText.text = "WRONG!";
-        } else
-        {
-            yesAnswerText.text = "WRONG!";
-            noAnswerText.text = "CORRECT!";
-        }
+        
     }
 
     IEnumerator TransitionToNextQuestion ()
