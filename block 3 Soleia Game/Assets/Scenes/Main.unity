@@ -1500,6 +1500,10 @@ MonoBehaviour:
     isTrue: 1
   questionText: {fileID: 595483790}
   CurrentScore: {fileID: 1493491608}
+  ScoreOne: {fileID: 0}
+  ScoreTwo: {fileID: 0}
+  ScoreThree: {fileID: 0}
+  ScoreFour: {fileID: 0}
   timeBetweemQuestions: 2
   yesAnswerText: {fileID: 388812384}
   noAnswerText: {fileID: 199019119}
